@@ -5,13 +5,10 @@ Mehmet Onur Keskin · Selen Akay · Ayşe Doğan · Berkecan Koçyiğit · Junko
 [Paper](https://doi.org/10.1145/3610978.3640759) · [Explore the method](METHOD.md) · [Try the code](#try-it-yourself) · [Study guide](docs/protocol.md) · [Citation](#cite-the-paper)
 
 [![Tests](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml)
-[![Software archive](https://zenodo.org/badge/DOI/10.5281/zenodo.22729006.svg)](https://doi.org/10.5281/zenodo.22729006)
-
-**A robot can look friendly—but does that change the deal you reach with it?**
 
 Two human–robot studies compare negotiation with NAO and Pepper, and with NAO and QT. They examine negotiation outcomes alongside first impressions and post-interaction attitudes, keeping the negotiating strategy common across robot conditions.
 
-## The idea
+## Method
 
 Participants rank their preferences for a holiday-planning task and negotiate twice. Robot order is counterbalanced. **NAO/Pepper and NAO/QT are separate study cohorts**, so their observations should not be treated as one interchangeable robot comparison.
 
@@ -25,22 +22,21 @@ flowchart LR
   F --> G
 ```
 
-## In the paper
+## Study and findings
 
 The paper reports differences in attitudes toward the robots, while its utility comparisons did not find significant differences between robot conditions. That separates an observed perception effect from the question of negotiation performance; a nonsignificant utility result is not an equivalence test. [Read the paper](https://doi.org/10.1145/3610978.3640759).
 
-## Explore this work
+## What you can explore
 
 Compare the two cohort configurations, inspect preference elicitation and review session records with robot order and domain identity preserved. The examples provide a starting point for studying appearance without mixing it with tactic changes.
 
 | Explore | Start with | What it shows |
 | --- | --- | --- |
-| Separate cohorts | `CONFIGURATIONS.md` | Choose NAO/Pepper or NAO/QT and the robot order. |
-| Preference elicitation | `docs/protocol.md` | Inspect participant ranking and conflicting robot preferences. |
-| Interpretation | `docs/analysis.md` | Keep domain, cohort and paired-session identity in the analysis. |
+| Separate cohorts | [CONFIGURATIONS.md](CONFIGURATIONS.md) | Choose NAO/Pepper or NAO/QT and the robot order. |
+| Preference elicitation | [docs/protocol.md](docs/protocol.md) | Inspect participant ranking and conflicting robot preferences. |
+| Interpretation | [docs/analysis.md](docs/analysis.md) | Keep domain, cohort and paired-session identity in the analysis. |
 
-This repository holds the paper-specific configurations, method checks and study
-guides. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
+The configurations, method checks and study guides are specific to this paper. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
 participant/conductor views and session analysis. Its exact **2.0.0** revision is
 pinned in [framework.json](framework.json); installation brings it in automatically.
 
@@ -80,14 +76,12 @@ In **New study → Import a paper or study configuration**, select
 to inspect the paper's protocol template. The [study guide](docs/protocol.md)
 explains the remaining protocol/asset requirements and device setup.
 
-## Data and reproducibility
+## Data and analysis
 
-Participant-level records and audio/video recordings are **not distributed in this
-repository**. Restricted access is compatible with sharing the method, protocol and
-analysis code; it does not require releasing human-study data publicly. The package
-provides synthetic inputs and documents which computations can be run from them.
-Recomputing the published human-study statistics additionally requires authorized
-access to the relevant inputs and the corresponding analysis specification.
+Participant records and recordings are not included. The examples use labeled
+synthetic inputs so you can run the code and inspect its calculations. Recomputing
+the human-study results requires authorized access to the original inputs and
+the matching analysis procedure.
 
 [Reproducibility guide](REPRODUCIBILITY.md) · [Paper-to-code map](paper-map.json) ·
 [Analysis guide](docs/analysis.md)
