@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "paper_id": "robot-appearance-2024",
+  "result_id": "synthetic-paired-analysis",
+  "claim_scope": "synthetic-validation",
+  "analysis": "paired-summary",
+  "environment": {
+    "framework": "2.0.0"
+  },
+  "parameters": {
+    "conditions": [
+      "NAO",
+      "Partner"
+    ],
+    "minimum_rounds": 0,
+    "seed": 42,
+    "bootstrap_samples": 2000
+  },
+  "inputs": [
+    {
+      "id": "synthetic-participants",
+      "path": "paired-inputs.json",
+      "sha256": "1b83719af1d905bfbfb958e70330c35f4df621f3338a2535500fb0fe59d24b31"
+    }
+  ],
+  "expected": [
+    {
+      "key": "complete_pairs",
+      "value": 3,
+      "source": "Three explicitly constructed paired fixture participants"
+    }
+  ],
+  "description": "Analysis-contract demonstration. Percentile participant bootstrap is a maintained analysis example, not a claim to recover the paper significance test."
+}

@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "repository": "robot-appearance-2024",
+  "paper": {
+    "type": "conference-paper",
+    "title": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics",
+    "authors": [
+      {
+        "given-names": "Mehmet Onur",
+        "family-names": "Keskin"
+      },
+      {
+        "given-names": "Selen",
+        "family-names": "Akay"
+      },
+      {
+        "given-names": "Ayşe",
+        "family-names": "Doğan"
+      },
+      {
+        "given-names": "Berkecan",
+        "family-names": "Koçyiğit"
+      },
+      {
+        "given-names": "Junko",
+        "family-names": "Kanero"
+      },
+      {
+        "given-names": "Reyhan",
+        "family-names": "Aydoğan"
+      }
+    ],
+    "year": 2024,
+    "url": "https://doi.org/10.1145/3610978.3640759",
+    "doi": "10.1145/3610978.3640759"
+  },
+  "selected_source": {
+    "entry": "LateReport.tex",
+    "scope": "Selected publication-aligned manuscript only. Working sources and reviewer correspondence are not distributed."
+  },
+  "framework": "framework.json",
+  "requirements": [
+    {
+      "id": "method-sec-negotiation",
+      "axis": "method",
+      "requirement": "sec-negotiation",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "sec-negotiation",
+          "line": 260,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "Implemented maintained component; unreported constants, historical source choice or original assets prevent a claim of complete historical equivalence.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-sec-hrn",
+      "axis": "method",
+      "requirement": "sec-hrn",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "sec-hrn",
+          "line": 282,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "Implemented maintained component; unreported constants, historical source choice or original assets prevent a claim of complete historical equivalence.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "protocol-schedule",
+      "axis": "protocol",
+      "requirement": "Practice, order, durations, breaks, instruments and condition identity",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "tab:holiday_values",
+          "line": 292,
+          "nearby_graphics": []
+        },
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "fig:exp_procedure",
+          "line": 318,
+          "nearby_graphics": [
+            {
+              "reference": "figures/full-nao.png",
+              "line": 311,
+              "path": "figures/full-nao.png",
+              "sha256": "c745cb0adf1edceef77fcfb07b2e12c889c31ccccd94a17495192b204ac85e6d"
+            },
+            {
+              "reference": "figures/pepper.png",
+              "line": 311,
+              "path": "figures/pepper.png",
+              "sha256": "2e1c64d8a7b123485baca6d303ac7d4a232d86faef8dcde2ccb4ea5fa159a7ee"
+            },
+            {
+              "reference": "figures/qtrobot.png",
+              "line": 311,
+              "path": "figures/qtrobot.png",
+              "sha256": "d8687de4e18ef2273184d1e2f0ed48ef470dd4bb66a4e48c2682872a03b498d7"
+            },
+            {
+              "reference": "figures/Procedure.png",
+              "line": 318,
+              "path": "figures/Procedure.png",
+              "sha256": "3b4e1cf86de2d896e06872302113f81efdbd72624ec057482e15ef2c005e547c"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "configs/",
+        "protocol-schedule.json",
+        "negotiator.application.protocol",
+        "negotiator.application.studies"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_protocol_contract.py"
+        },
+        {
+          "repository": "framework",
+          "path": "tests/test_study_protocols.py"
+        }
+      ],
+      "result_target": "configs/synthetic.json",
+      "explanation": "Two fifteen-minute sessions with preference elicitation before each. Prior attitude is measured before the experiment; Godspeed and thermometer responses follow the specified interactions. Missing original assets and instrument wording remain explicit preflight requirements.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "historical-outcomes",
+      "axis": "analysis",
+      "requirement": "Recompute the original participant results",
+      "status": "unverified",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "tab:nego_res",
+          "line": 332,
+          "nearby_graphics": [
+            {
+              "reference": "figures/Procedure.png",
+              "line": 318,
+              "path": "figures/Procedure.png",
+              "sha256": "3b4e1cf86de2d896e06872302113f81efdbd72624ec057482e15ef2c005e547c"
+            }
+          ]
+        },
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "fig:Warmth",
+          "line": 365,
+          "nearby_graphics": [
+            {
+              "reference": "figures/warmthNaoPepper.png",
+              "line": 362,
+              "path": "figures/warmthNaoPepper.png",
+              "sha256": "788955751e4324a56961a2ed69efd7992a8bf45c290580266623ee1a1e54705b"
+            },
+            {
+              "reference": "figures/warmthNaoQT.png",
+              "line": 363,
+              "path": "figures/warmthNaoQT.png",
+              "sha256": "d798214b2a802c45a05eda7604c5366c5dee256a488ca204cbc341039998bb3e"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "reproduction/published-results.json"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/published-results.json",
+      "explanation": "Original permitted inputs and historical analysis decisions are unavailable. The recipe returns an unavailable receipt and no numerical result.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "participant-analysis",
+      "axis": "analysis",
+      "requirement": "Participant unit, pairing, cohorts and missingness",
+      "status": "partial",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "tab:nego_res",
+          "line": 332,
+          "nearby_graphics": [
+            {
+              "reference": "figures/Procedure.png",
+              "line": 318,
+              "path": "figures/Procedure.png",
+              "sha256": "3b4e1cf86de2d896e06872302113f81efdbd72624ec057482e15ef2c005e547c"
+            }
+          ]
+        },
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "fig:Warmth",
+          "line": 365,
+          "nearby_graphics": [
+            {
+              "reference": "figures/warmthNaoPepper.png",
+              "line": 362,
+              "path": "figures/warmthNaoPepper.png",
+              "sha256": "788955751e4324a56961a2ed69efd7992a8bf45c290580266623ee1a1e54705b"
+            },
+            {
+              "reference": "figures/warmthNaoQT.png",
+              "line": 363,
+              "path": "figures/warmthNaoQT.png",
+              "sha256": "d798214b2a802c45a05eda7604c5366c5dee256a488ca204cbc341039998bb3e"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "negotiator.reproduction.operations.paired_summary",
+        "reproduction/paired-example.json"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_reproduction.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/paired-example.json",
+      "explanation": "Tested generic paired analysis with explicit cohort/domain grouping and exclusions; synthetic input and modern percentile intervals do not reproduce the paper significance tests.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "independent-use",
+      "axis": "runnability",
+      "requirement": "Independent install, configuration, run and report",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "tab:holiday_values",
+          "line": 292,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "run.py",
+        "requirements.txt",
+        "framework.json"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_companion.py"
+        }
+      ],
+      "result_target": "configs/synthetic.json",
+      "explanation": "The supported hardware-free example runs in a clean environment using only the pinned engine. Robot operation requires separate lab validation.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "reader-paths",
+      "axis": "documentation",
+      "requirement": "First use, paper inspection, contribution and citation",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "LateReport.tex",
+          "file": "LateReport.tex",
+          "sha256": "4fff6932960ac60c2b7f3f8fffc4e64a1c0093ba3732d6d03d902388a4ba4acb",
+          "label": "sec-negotiation",
+          "line": 260,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "README.md",
+        "METHOD.md",
+        "REPRODUCIBILITY.md",
+        "docs/"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_release_contract.py"
+        }
+      ],
+      "result_target": "reproduction/targets.json",
+      "explanation": "Executable example commands, method map, protocol limits and preferred paper citation are provided.",
+      "documentation": "METHOD.md"
+    }
+  ],
+  "interpretation": {
+    "full": "Evidence supports this scoped requirement, not the entire paper.",
+    "partial": "Some elements are implemented but unresolved method/protocol choices remain.",
+    "unverified": "Required original evidence is unavailable."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics — maintained code companion",
+  "version": "2.0.0",
+  "codeRepository": "https://github.com/monurkeskin/robot-appearance-2024",
+  "datePublished": "2026-09-12",
+  "license": "https://spdx.org/licenses/GPL-3.0-only.html",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Mehmet Onur",
+      "familyName": "Keskin"
+    }
+  ],
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "name": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics",
+    "identifier": "https://doi.org/10.1145/3610978.3640759"
+  },
+  "programmingLanguage": [
+    "Python"
+  ],
+  "runtimePlatform": "Python >=3.11",
+  "identifier": "https://doi.org/10.5281/zenodo.22729006"
+}

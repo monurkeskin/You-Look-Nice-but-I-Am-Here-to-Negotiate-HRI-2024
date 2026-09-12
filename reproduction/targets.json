@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "manifests": [
+    "method.json",
+    "paired-example.json",
+    "published-results.json"
+  ],
+  "rules": {
+    "expected_values": "comparison only",
+    "unit": "participant",
+    "rounding": "display only",
+    "missing": "null with reason"
+  }
+}

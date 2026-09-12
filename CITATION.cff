@@ -1,0 +1,50 @@
+{
+  "cff-version": "1.2.0",
+  "message": "Please cite the associated paper, and NEGOTIATOR for the framework. Record the software version used.",
+  "type": "software",
+  "title": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics — maintained code companion",
+  "authors": [
+    {
+      "given-names": "Mehmet Onur",
+      "family-names": "Keskin"
+    }
+  ],
+  "version": "2.0.0",
+  "date-released": "2026-09-12",
+  "license": "GPL-3.0-only",
+  "repository-code": "https://github.com/monurkeskin/robot-appearance-2024",
+  "doi": "10.5281/zenodo.22729006",
+  "preferred-citation": {
+    "type": "conference-paper",
+    "title": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics",
+    "authors": [
+      {
+        "given-names": "Mehmet Onur",
+        "family-names": "Keskin"
+      },
+      {
+        "given-names": "Selen",
+        "family-names": "Akay"
+      },
+      {
+        "given-names": "Ayşe",
+        "family-names": "Doğan"
+      },
+      {
+        "given-names": "Berkecan",
+        "family-names": "Koçyiğit"
+      },
+      {
+        "given-names": "Junko",
+        "family-names": "Kanero"
+      },
+      {
+        "given-names": "Reyhan",
+        "family-names": "Aydoğan"
+      }
+    ],
+    "year": 2024,
+    "url": "https://doi.org/10.1145/3610978.3640759",
+    "doi": "10.1145/3610978.3640759"
+  }
+}

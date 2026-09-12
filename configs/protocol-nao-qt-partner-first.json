@@ -1,0 +1,55 @@
+{
+  "study_id": "robot-appearance-2024",
+  "participant_id": "P001",
+  "title": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics",
+  "domain": "holiday",
+  "preference_mode": "elicited",
+  "cohort": "nao-qt",
+  "first_actor": "human",
+  "output": "text",
+  "seed": 42,
+  "synthetic": false,
+  "instructions": "Study the displayed preferences and negotiate a complete offer before the deadline. Allocation quantities are what you keep.",
+  "surveys": [],
+  "conditions": [
+    {
+      "label": "QT",
+      "strategy": "solver-2021",
+      "duration_seconds": 900,
+      "domain": "holiday",
+      "output": "qt",
+      "output_device": "qt",
+      "practice": false
+    },
+    {
+      "label": "NAO",
+      "strategy": "solver-2021",
+      "duration_seconds": 900,
+      "domain": "holiday-b",
+      "output": "nao",
+      "output_device": "nao",
+      "practice": false
+    }
+  ],
+  "purpose": "published-protocol",
+  "citation_ids": [
+    "robot-appearance-2024"
+  ],
+  "order": "as_entered",
+  "protocol": {
+    "id": "robot-appearance-2024",
+    "revision": "2",
+    "paper": "https://doi.org/10.1145/3610978.3640759",
+    "requirements": [
+      {
+        "id": "evidence-1",
+        "description": "Resolve prose versus table differences in Holiday A/B domains and recover exact session mapping"
+      },
+      {
+        "id": "evidence-2",
+        "description": "Original pre-study and per-session questionnaires, instructions and timing records"
+      }
+    ],
+    "configuration_sha256": "1a4843ec2bebd494ab739b386a05b9f5f0a2693d378a04b59c46ed4de59bf199"
+  }
+}

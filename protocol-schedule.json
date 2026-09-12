@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "paper_id": "robot-appearance-2024",
+  "protocol_summary": "Two fifteen-minute sessions with preference elicitation before each. Prior attitude is measured before the experiment; Godspeed and thermometer responses follow the specified interactions.",
+  "historical_instruments_included": false,
+  "unknowns": [
+    "Resolve prose versus table differences in Holiday A/B domains and recover exact session mapping",
+    "Original pre-study and per-session questionnaires, instructions and timing records",
+    "Permitted records with cohort, condition order, utility-scale comparability and inclusion rules"
+  ],
+  "required_before_human_use": "Resolve each missing evidence item and validate the local study protocol before starting.",
+  "analysis_unit": "participant",
+  "minimum_rounds_in_either_session": 0,
+  "round_definition": "Must be supplied from the historical record; do not equate rounds with individual offers.",
+  "questionnaires": "pre_study and post_session",
+  "empirical_reproduction": "unavailable: original permitted inputs and analysis provenance are not included"
+}

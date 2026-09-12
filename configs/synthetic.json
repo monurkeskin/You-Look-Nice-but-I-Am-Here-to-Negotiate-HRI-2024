@@ -1,0 +1,379 @@
+{
+  "study_id": "robot-appearance-2024",
+  "participant_id": "SYNTHETIC001",
+  "title": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics",
+  "domain": "holiday",
+  "preference_mode": "assigned",
+  "cohort": "default",
+  "first_actor": "human",
+  "output": "text",
+  "seed": 42,
+  "synthetic": true,
+  "instructions": "Study the displayed preferences and negotiate a complete offer before the deadline. Allocation quantities are what you keep.",
+  "surveys": [],
+  "conditions": [
+    {
+      "label": "NAO",
+      "strategy": "solver-2021",
+      "duration_seconds": 900,
+      "domain": "holiday",
+      "practice": false,
+      "output": "text",
+      "output_device": null,
+      "human_profile": {
+        "weights": {
+          "Accommodation": 0.4,
+          "Destination": 0.3,
+          "Events": 0.2,
+          "Season": 0.1
+        },
+        "scores": {
+          "Accommodation": [
+            {
+              "value": "Caravan",
+              "score": 1.0
+            },
+            {
+              "value": "Hotel",
+              "score": 0.75
+            },
+            {
+              "value": "House",
+              "score": 0.5
+            },
+            {
+              "value": "Boat",
+              "score": 0.25
+            }
+          ],
+          "Destination": [
+            {
+              "value": "Barcelona",
+              "score": 1.0
+            },
+            {
+              "value": "Rome",
+              "score": 0.75
+            },
+            {
+              "value": "London",
+              "score": 0.5
+            },
+            {
+              "value": "Boston",
+              "score": 0.25
+            }
+          ],
+          "Events": [
+            {
+              "value": "Show",
+              "score": 1.0
+            },
+            {
+              "value": "Shopping",
+              "score": 0.75
+            },
+            {
+              "value": "Museum",
+              "score": 0.5
+            },
+            {
+              "value": "Sports",
+              "score": 0.25
+            }
+          ],
+          "Season": [
+            {
+              "value": "Winter",
+              "score": 1.0
+            },
+            {
+              "value": "Summer",
+              "score": 0.75
+            },
+            {
+              "value": "Spring",
+              "score": 0.5
+            },
+            {
+              "value": "Fall",
+              "score": 0.25
+            }
+          ]
+        },
+        "provenance": "assigned",
+        "reservation": 0.0,
+        "conversion": "synthetic-rank-linear-paired-v1"
+      },
+      "agent_profile": {
+        "weights": {
+          "Accommodation": 0.3,
+          "Destination": 0.4,
+          "Events": 0.1,
+          "Season": 0.2
+        },
+        "scores": {
+          "Accommodation": [
+            {
+              "value": "Caravan",
+              "score": 0.5
+            },
+            {
+              "value": "Hotel",
+              "score": 0.25
+            },
+            {
+              "value": "House",
+              "score": 1.0
+            },
+            {
+              "value": "Boat",
+              "score": 0.75
+            }
+          ],
+          "Destination": [
+            {
+              "value": "Barcelona",
+              "score": 0.5
+            },
+            {
+              "value": "Rome",
+              "score": 0.25
+            },
+            {
+              "value": "London",
+              "score": 1.0
+            },
+            {
+              "value": "Boston",
+              "score": 0.75
+            }
+          ],
+          "Events": [
+            {
+              "value": "Show",
+              "score": 0.5
+            },
+            {
+              "value": "Shopping",
+              "score": 0.25
+            },
+            {
+              "value": "Museum",
+              "score": 1.0
+            },
+            {
+              "value": "Sports",
+              "score": 0.75
+            }
+          ],
+          "Season": [
+            {
+              "value": "Winter",
+              "score": 0.5
+            },
+            {
+              "value": "Summer",
+              "score": 0.25
+            },
+            {
+              "value": "Spring",
+              "score": 1.0
+            },
+            {
+              "value": "Fall",
+              "score": 0.75
+            }
+          ]
+        },
+        "provenance": "assigned",
+        "reservation": 0.0,
+        "conversion": "rank-linear-paired-v1"
+      }
+    },
+    {
+      "label": "Pepper",
+      "strategy": "solver-2021",
+      "duration_seconds": 900,
+      "domain": "holiday-b",
+      "practice": false,
+      "output": "text",
+      "output_device": null,
+      "human_profile": {
+        "weights": {
+          "Accommodation": 0.4,
+          "Destination": 0.3,
+          "Duration": 0.2,
+          "Season": 0.1
+        },
+        "scores": {
+          "Accommodation": [
+            {
+              "value": "Hotel",
+              "score": 1.0
+            },
+            {
+              "value": "House",
+              "score": 0.75
+            },
+            {
+              "value": "Boat",
+              "score": 0.5
+            },
+            {
+              "value": "Tent",
+              "score": 0.25
+            }
+          ],
+          "Destination": [
+            {
+              "value": "Venice",
+              "score": 1.0
+            },
+            {
+              "value": "Lisbon",
+              "score": 0.75
+            },
+            {
+              "value": "Sydney",
+              "score": 0.5
+            },
+            {
+              "value": "Miami",
+              "score": 0.25
+            }
+          ],
+          "Duration": [
+            {
+              "value": "3 Days",
+              "score": 1.0
+            },
+            {
+              "value": "1 Week",
+              "score": 0.75
+            },
+            {
+              "value": "2 Weeks",
+              "score": 0.5
+            },
+            {
+              "value": "3 Weeks",
+              "score": 0.25
+            }
+          ],
+          "Season": [
+            {
+              "value": "Winter",
+              "score": 1.0
+            },
+            {
+              "value": "Summer",
+              "score": 0.75
+            },
+            {
+              "value": "Spring",
+              "score": 0.5
+            },
+            {
+              "value": "Fall",
+              "score": 0.25
+            }
+          ]
+        },
+        "provenance": "assigned",
+        "reservation": 0.0,
+        "conversion": "synthetic-rank-linear-paired-v1"
+      },
+      "agent_profile": {
+        "weights": {
+          "Accommodation": 0.3,
+          "Destination": 0.4,
+          "Duration": 0.1,
+          "Season": 0.2
+        },
+        "scores": {
+          "Accommodation": [
+            {
+              "value": "Hotel",
+              "score": 0.5
+            },
+            {
+              "value": "House",
+              "score": 0.25
+            },
+            {
+              "value": "Boat",
+              "score": 1.0
+            },
+            {
+              "value": "Tent",
+              "score": 0.75
+            }
+          ],
+          "Destination": [
+            {
+              "value": "Venice",
+              "score": 0.5
+            },
+            {
+              "value": "Lisbon",
+              "score": 0.25
+            },
+            {
+              "value": "Sydney",
+              "score": 1.0
+            },
+            {
+              "value": "Miami",
+              "score": 0.75
+            }
+          ],
+          "Duration": [
+            {
+              "value": "3 Days",
+              "score": 0.5
+            },
+            {
+              "value": "1 Week",
+              "score": 0.25
+            },
+            {
+              "value": "2 Weeks",
+              "score": 1.0
+            },
+            {
+              "value": "3 Weeks",
+              "score": 0.75
+            }
+          ],
+          "Season": [
+            {
+              "value": "Winter",
+              "score": 0.5
+            },
+            {
+              "value": "Summer",
+              "score": 0.25
+            },
+            {
+              "value": "Spring",
+              "score": 1.0
+            },
+            {
+              "value": "Fall",
+              "score": 0.75
+            }
+          ]
+        },
+        "provenance": "assigned",
+        "reservation": 0.0,
+        "conversion": "rank-linear-paired-v1"
+      }
+    }
+  ],
+  "purpose": "demonstration",
+  "citation_ids": [
+    "robot-appearance-2024"
+  ],
+  "order": "as_entered"
+}
