@@ -23,6 +23,13 @@ they do not resolve the historical ambiguity. Published-protocol start remains
 blocked on this evidence. NAO/Pepper and NAO/QT remain separate cohorts, and the
 analysis does not silently equate their utility domains.
 
+There is also a scoring distinction: the table illustrates issue weights
+(.48, .32, .16, .04), while the inspected legacy preference elicitor and the
+maintained four-issue rank transform produce (.4, .3, .2, .1). Resolving which
+conversion was used in each cohort requires configuration provenance, not public
+release of participant records. A table transcription and an elicitation algorithm
+must not be presented as equivalent merely because both weights sum to one.
+
 ## Utility, targets and game scores
 
 A bid always states the human share. Agent utility uses the complementary allocation.

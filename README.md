@@ -1,81 +1,108 @@
-# You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics
+# You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics — [HRI 2024]
 
+Mehmet Onur Keskin · Selen Akay · Ayşe Doğan · Berkecan Koçyiğit · Junko Kanero · Reyhan Aydoğan
+
+[Paper](https://doi.org/10.1145/3610978.3640759) · [Explore the method](METHOD.md) · [Try the code](#try-it-yourself) · [Study guide](docs/protocol.md) · [Citation](#cite-the-paper)
+
+[![Tests](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml)
 [![Software archive](https://zenodo.org/badge/DOI/10.5281/zenodo.22729006.svg)](https://doi.org/10.5281/zenodo.22729006)
 
-**Independent research companion · maintained release 2.0.0**
+**A robot can look friendly—but does that change the deal you reach with it?**
 
-[![Tests](https://github.com/monurkeskin/robot-appearance-2024/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/robot-appearance-2024/actions/workflows/tests.yml)
-[Paper](https://doi.org/10.1145/3610978.3640759) · [Method](METHOD.md) · [Reproduce](REPRODUCIBILITY.md) · [Protocol](docs/protocol.md) · [Contribute](docs/development.md)
+Two human–robot studies compare negotiation with NAO and Pepper, and with NAO and QT. They examine negotiation outcomes alongside first impressions and post-interaction attitudes, keeping the negotiating strategy common across robot conditions.
 
-Solver-based negotiation with robot appearance varied separately in NAO/Pepper and NAO/QT cohorts.
+## The idea
 
-This package contains this paper's configurations, method requirements, independent
-checks and analysis recipes. It uses a pinned [NEGOTIATOR](https://github.com/monurkeskin/NEGOTIATOR)
-engine; no second engine checkout or robot is needed for the first example.
+Participants rank their preferences for a holiday-planning task and negotiate twice. Robot order is counterbalanced. **NAO/Pepper and NAO/QT are separate study cohorts**, so their observations should not be treated as one interchangeable robot comparison.
 
-| Start here | What you will get |
-| --- | --- |
-| First-time user | A short generated negotiation, session records and a readable report |
-| Researcher reading the paper | [Paper map](paper-map.json), exact point tables where recovered, equation checks and result availability |
-| Contributor | [Module boundaries and test-first example](docs/development.md), extensible configs and reusable engine contracts |
+```mermaid
+flowchart LR
+  A[Study I] --> B[NAO and Pepper]
+  C[Study II] --> D[NAO and QT]
+  B --> E[Preferences; two negotiations; surveys]
+  D --> F[Preferences; two negotiations; surveys]
+  E --> G[Within-study outcome and attitude comparisons]
+  F --> G
+```
 
-## Run your first example
+## In the paper
 
-Use Python 3.11 or 3.12. Clone this repository, then run:
+The paper reports differences in attitudes toward the robots, while its utility comparisons did not find significant differences between robot conditions. That separates an observed perception effect from the question of negotiation performance; a nonsignificant utility result is not an equivalence test. [Read the paper](https://doi.org/10.1145/3610978.3640759).
+
+## Explore this work
+
+Compare the two cohort configurations, inspect preference elicitation and review session records with robot order and domain identity preserved. The examples provide a starting point for studying appearance without mixing it with tactic changes.
+
+| Explore | Start with | What it shows |
+| --- | --- | --- |
+| Separate cohorts | `CONFIGURATIONS.md` | Choose NAO/Pepper or NAO/QT and the robot order. |
+| Preference elicitation | `docs/protocol.md` | Inspect participant ranking and conflicting robot preferences. |
+| Interpretation | `docs/analysis.md` | Keep domain, cohort and paired-session identity in the analysis. |
+
+This repository holds the paper-specific configurations, method checks and study
+guides. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
+participant/conductor views and session analysis. Its exact **2.0.0** revision is
+pinned in [framework.json](framework.json); installation brings it in automatically.
+
+The paper's holiday table and prose differ, and its illustrated weights differ from the legacy rank-to-weight conversion. The maintained configurations expose their choices in [METHOD.md](METHOD.md); they do not settle which files were used in each original cohort. Robot gestures and affect inputs also require the relevant lab setup.
+
+## Try it yourself
+
+Use Python 3.11 or 3.12 and Git. This first example runs locally without a robot,
+camera or service account.
 
 ```bash
-git clone https://github.com/monurkeskin/robot-appearance-2024.git
-cd robot-appearance-2024
+git clone https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024.git
+cd You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python run.py --output demo-output
 ```
 
-On Windows, create the environment with `py -3 -m venv .venv` and activate it
-with `.venv\Scripts\Activate.ps1` in PowerShell. Git is required for the pinned
-engine dependency. [Troubleshooting and compatibility](docs/compatibility.md).
+On Windows, create the environment with `py -3 -m venv .venv` and activate it with
+`.venv\Scripts\Activate.ps1` in PowerShell.
 
-Open `demo-output/report/index.html`. The output includes full-precision JSON/CSV,
-a workbook, figures, immutable source records and a timing receipt. This is a
-**synthetic functional example**; it does not reproduce human participants or an
-emotional, gesture or embodiment benefit. Existing output directories are preserved.
+Open **`demo-output/report/index.html`** to follow the example negotiation. The
+output includes offers, utility trajectories, session records and exportable
+figures. These are synthetic examples for exploring the software and method.
+[Installation help](docs/compatibility.md).
 
-![Protocol overview: configuration, isolated sessions, durable events and analysis.](docs/images/protocol.svg)
-
-## Inspect the method and run the GUI
+### Read a calculation or open the study workspace
 
 ```bash
 negotiator reproduce reproduction/method.json --output method-output
-negotiator cite demo-output/records --format bibtex
 negotiator gui
 ```
 
-In **New study → Import a paper or study configuration**, choose
-`configs/synthetic.json` to inspect the hardware-free demonstration, or
-`configs/protocol-nao-pepper-nao-first.json` to inspect the published-protocol template and its missing
-requirements. Participant and conductor use separate views. [Step-by-step protocol guide](docs/protocol.md).
+In **New study → Import a paper or study configuration**, select
+`configs/synthetic.json` for the demonstration, or `configs/protocol-nao-pepper-nao-first.json`
+to inspect the paper's protocol template. The [study guide](docs/protocol.md)
+explains the remaining protocol/asset requirements and device setup.
 
-## What can currently be reproduced?
+## Data and reproducibility
 
-| Target | Scope |
-| --- | --- |
-| `method.json` | Recompute and check against independent references |
-| `paired-example.json` | Recompute and check against independent references |
-| `published-results.json` | Unavailable original inputs; no numbers fabricated |
+Participant-level records and audio/video recordings are **not distributed in this
+repository**. Restricted access is compatible with sharing the method, protocol and
+analysis code; it does not require releasing human-study data publicly. The package
+provides synthetic inputs and documents which computations can be run from them.
+Recomputing the published human-study statistics additionally requires authorized
+access to the relevant inputs and the corresponding analysis specification.
 
-Two fifteen-minute sessions with preference elicitation before each. Prior attitude is measured before the experiment; Godspeed and thermometer responses follow the specified interactions.
+[Reproducibility guide](REPRODUCIBILITY.md) · [Paper-to-code map](paper-map.json) ·
+[Analysis guide](docs/analysis.md)
 
-Original human records and some historical settings/assets remain unavailable.
-[REPRODUCIBILITY.md](REPRODUCIBILITY.md) explains every target and its limits;
-[paper-map.json](paper-map.json) records full, partial and unverified requirements
-separately. A passing synthetic test does not establish historical experiment parity.
+## Build on the work
 
-## Cite this work
+To change a paper condition, start with its configuration and add a small test
+showing the intended behavior. Shared negotiation rules belong in NEGOTIATOR;
+paper-specific profiles, protocols and result recipes belong here. The
+[development guide](docs/development.md) walks through these boundaries and the
+test-first workflow. [Contribution guide](CONTRIBUTING.md).
 
-Cite the associated paper when using or studying its method. Also cite the engine
-and record the exact software version used; `negotiator cite` extracts citations
-from executed session records.
+## Cite the paper
+
+If you use this method or study design, please cite the associated paper:
 
 ```bibtex
 @inproceedings{robotappearance2024,
@@ -87,8 +114,8 @@ from executed session records.
 }
 ```
 
-[CITATION.cff](CITATION.cff) offers the paper as the preferred citation.
-[CodeMeta](codemeta.json), [source notices](NOTICE) and
-[framework identity](framework.json) support versioned attribution. The software
-is GPL-3.0-only. No paper working tree, participant recording or licensed robot
-asset is bundled.
+The [citation file](CITATION.cff) provides the paper as the preferred citation.
+For software provenance, also record the version and [archived 2.0.0 artifact](https://doi.org/10.5281/zenodo.22729006).
+When using the shared engine in new research, cite the
+[NEGOTIATOR framework paper](https://doi.org/10.24963/ijcai.2024/1012).
+GPL-3.0-only; original contributors and sources are credited in [NOTICE](NOTICE).
