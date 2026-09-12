@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "paper_url": "https://doi.org/10.1145/3610978.3640759",
+  "pdf_sha256": "5730880ee08994d445b338c20e0cd295a3dd211f7c38f366f71a09abcd4aee29",
+  "pdf_reference": "Publisher PDF",
+  "verification": "Compared with the cited paper PDF; page numbers count from its first page.",
+  "figures": [
+    {
+      "file": "nao.png",
+      "figure": "Figure 1a; fig:nao",
+      "pdf_page": 2,
+      "source_file": "figures/full-nao.png",
+      "source_sha256": "c745cb0adf1edceef77fcfb07b2e12c889c31ccccd94a17495192b204ac85e6d",
+      "sha256": "c745cb0adf1edceef77fcfb07b2e12c889c31ccccd94a17495192b204ac85e6d",
+      "conversion": "Unmodified source image.",
+      "display_file": "nao.svg",
+      "display_sha256": "fc24e8f080257f0a50c6f23db47f53b61d097f0eebccd22c0c2efff35dbde6af",
+      "display_note": "SVG places the unmodified image over white, matching the paper and keeping black text visible in dark themes."
+    },
+    {
+      "file": "pepper.png",
+      "figure": "Figure 1b; fig:pepper",
+      "pdf_page": 2,
+      "source_file": "figures/pepper.png",
+      "source_sha256": "2e1c64d8a7b123485baca6d303ac7d4a232d86faef8dcde2ccb4ea5fa159a7ee",
+      "sha256": "2e1c64d8a7b123485baca6d303ac7d4a232d86faef8dcde2ccb4ea5fa159a7ee",
+      "conversion": "Unmodified source image.",
+      "display_file": "pepper.svg",
+      "display_sha256": "b874d5cf72598041b1dbbd580bdc6af18c69e8f253b59c9a1fb6aeb21a2dd07c",
+      "display_note": "SVG places the unmodified image over white, matching the paper and keeping black text visible in dark themes."
+    },
+    {
+      "file": "qt.png",
+      "figure": "Figure 1c; fig:qt",
+      "pdf_page": 2,
+      "source_file": "figures/qtrobot.png",
+      "source_sha256": "d8687de4e18ef2273184d1e2f0ed48ef470dd4bb66a4e48c2682872a03b498d7",
+      "sha256": "d8687de4e18ef2273184d1e2f0ed48ef470dd4bb66a4e48c2682872a03b498d7",
+      "conversion": "Unmodified source image.",
+      "display_file": "qt.svg",
+      "display_sha256": "aa7cd3ee7f855b7d655d6c0b656bfccf48e59c625a7542465abe0e0a7afce965",
+      "display_note": "SVG places the unmodified image over white, matching the paper and keeping black text visible in dark themes."
+    },
+    {
+      "file": "procedure.png",
+      "figure": "Figure 2; fig:exp_procedure",
+      "pdf_page": 3,
+      "source_file": "figures/Procedure.png",
+      "source_sha256": "3b4e1cf86de2d896e06872302113f81efdbd72624ec057482e15ef2c005e547c",
+      "sha256": "3b4e1cf86de2d896e06872302113f81efdbd72624ec057482e15ef2c005e547c",
+      "conversion": "Unmodified source image.",
+      "display_file": "procedure.svg",
+      "display_sha256": "87a82b43552c971e3e542338c044b945e0f08d2c396eaf901211828f7c0cb4df",
+      "display_note": "SVG places the unmodified image over white, matching the paper and keeping black text visible in dark themes."
+    }
+  ]
+}

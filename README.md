@@ -6,25 +6,58 @@ Mehmet Onur Keskin · Selen Akay · Ayşe Doğan · Berkecan Koçyiğit · Junko
 
 [![Tests](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml)
 
-Two human–robot studies compare negotiation with NAO and Pepper, and with NAO and QT. They examine negotiation outcomes alongside first impressions and post-interaction attitudes, keeping the negotiating strategy common across robot conditions.
+People form impressions of a robot before it makes its first offer. **Do those
+impressions carry into bargaining outcomes?** This paper studies holiday planning
+with NAO, Pepper and QT, comparing negotiation scores with impressions and
+post-interaction attitudes.
 
-## Method
+<p align="center">
+  <img src="docs/paper/nao.svg" height="190" alt="NAO, Figure 1a in the paper">
+  <img src="docs/paper/pepper.svg" height="190" alt="Pepper, Figure 1b in the paper">
+  <img src="docs/paper/qt.svg" height="190" alt="QT, Figure 1c in the paper">
+</p>
 
-Participants rank their preferences for a holiday-planning task and negotiate twice. Robot order is counterbalanced. **NAO/Pepper and NAO/QT are separate study cohorts**, so their observations should not be treated as one interchangeable robot comparison.
+*Figure 1: the three robot appearances. They were compared in two separate studies,
+not in a single three-robot experiment.*
 
-```mermaid
-flowchart LR
-  A[Study I] --> B[NAO and Pepper]
-  C[Study II] --> D[NAO and QT]
-  B --> E[Preferences; two negotiations; surveys]
-  D --> F[Preferences; two negotiations; surveys]
-  E --> G[Within-study outcome and attitude comparisons]
-  F --> G
-```
+## Two studies with a common procedure
 
-## Study and findings
+![Paper Figure 2: preference elicitation, first robot negotiation and survey, a five-minute break, then the second robot negotiation and survey.](docs/paper/procedure.svg)
 
-The paper reports differences in attitudes toward the robots, while its utility comparisons did not find significant differences between robot conditions. That separates an observed perception effect from the question of negotiation performance; a nonsignificant utility result is not an equivalence test. [Read the paper](https://doi.org/10.1145/3610978.3640759).
+*Figure 2. Robot order is counterbalanced. Each negotiation has a fifteen-minute
+deadline and is followed by a survey.*
+
+| Study | Robot pair | Setting | Utility-analysis participants |
+| --- | --- | --- | ---: |
+| I | NAO / Pepper | Sabancı University | 52 |
+| II | NAO / QT | Özyeğin University | 74 |
+
+Before negotiating, people rank holiday issues and their possible values. The
+agent receives a conflicting preference profile. Participants negotiate twice;
+the paper's procedure changes destinations between sessions. Preference order,
+robot order and cohort therefore belong in the study record.
+
+## Appearance, warmth and negotiation scores
+
+The paper reports differences in perceptions of the robots, but did not find
+significant differences in **participants' utility scores** within either robot
+pair. Table 2 provides the following means and standard deviations, on a 0–100
+scale:
+
+| Study / robot | Participant score, mean ± SD | Robot score, mean ± SD |
+| --- | ---: | ---: |
+| I / NAO | 72.43 ± 11.61 | 76.67 ± 7.82 |
+| I / Pepper | 72.13 ± 13.12 | 77.64 ± 8.72 |
+| II / NAO | 80.32 ± 9.41 | 71.07 ± 8.63 |
+| II / QT | 81.93 ± 8.47 | 69.11 ± 8.20 |
+
+In Study I, post-negotiation warmth was higher for NAO than Pepper
+(68.40 vs. 57.44; $p=0.039$). In Study II, NAO was rated as more animate and
+anthropomorphic than QT. These findings distinguish a person's experience of
+the robot from the score they obtain. The nonsignificant utility comparisons
+do not establish equivalence, and the two cohorts are not interchangeable.
+[Paper Sections 3.3–3.4 and Table 2](https://doi.org/10.1145/3610978.3640759) ·
+[Figure and result sources](docs/paper/README.md).
 
 ## What you can explore
 
