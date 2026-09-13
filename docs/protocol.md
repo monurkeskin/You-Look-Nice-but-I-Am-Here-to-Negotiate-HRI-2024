@@ -23,9 +23,9 @@ questionnaire. A restart conservatively restarts the full break and records this
 
 ## Before using a published-protocol template
 
-- Resolve prose versus table differences in Holiday A/B domains and recover exact session mapping.
+- Inspect the fixed-option choice in [METHOD](../METHOD.md#what-changes-between-sessions); only destinations change between sessions.
 - Original pre-study and per-session questionnaires, instructions and timing records.
-- Permitted records with cohort, condition order, utility-scale comparability and inclusion rules.
+- Original cohort domain records are needed for historical equivalence, not to execute a new declared domain choice.
 
 The templates contain hash-pinned scientific configuration and named evidence
 requirements. Supply only validated local files and their SHA-256 for the appropriate
@@ -35,7 +35,20 @@ timing before starting. [protocol-schedule.json](../protocol-schedule.json) reco
 what is known and unknown. Missing original questionnaire text is not replaced with
 invented questions. Synthetic examples remain demonstrations.
 
+The next configuration revision embeds two 256-outcome domains. Events,
+Accommodation and Season stay fixed while Destination changes by session position.
+Both cohorts use this declared maintained set; the unresolved table alternatives
+are not silently assigned to a cohort. These revisions await a matching engine
+release; the archived 2.0.0 configurations remain unchanged.
+
 ## During and after the session
+
+Before **each** main session, ask the participant to rank every issue and every
+value from most to least preferred. Confirm these rankings in Preferences; the
+framework constructs and records both profiles using `rank-linear-paired-v1`.
+Do not reuse the first session's ranking or substitute a generic XML weight table.
+The agent's issue and value ranks use the paired transformation explained in
+[METHOD](../METHOD.md#from-participant-rankings-to-paired-preferences).
 
 Use **Start session** after preferences and required surveys. Follow the selected
 turn protocol. Notifications and rejected offers do not create additional offers.
@@ -47,3 +60,16 @@ continuing; restarting an interrupted session does not invent elapsed time.
 After completion use **Build report**, or run `negotiator report PATH --output NEW_DIR`.
 Keep original records and the generated report together, and export citations using
 `negotiator cite PATH --format bibtex`. [Analysis guide](analysis.md).
+
+## Materials for a new session
+
+Each protocol requirement names its purpose. `execution` requirements cover the
+model, instruments and presentation materials needed to run the configured study.
+Their availability and hashes are checked before a session starts.
+`historical-analysis` requirements describe evidence needed to assess the original
+experiment; unavailable participant records do not prevent a new session.
+
+This separation does not establish equivalence with the historical experiment.
+A demonstration remains synthetic, and a missing runtime asset still blocks a
+published-protocol run. Inspect historical requirements separately with
+`protocol_readiness(spec, operation="historical-analysis")`.

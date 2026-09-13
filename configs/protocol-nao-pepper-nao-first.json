@@ -2,21 +2,103 @@
   "study_id": "robot-appearance-2024",
   "participant_id": "P001",
   "title": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics",
-  "domain": "holiday",
+  "domain": {
+    "schema_version": 1,
+    "name": "appearance-holiday-1",
+    "issues": [
+      {
+        "name": "Destination",
+        "values": [
+          "Barcelona",
+          "Rome",
+          "London",
+          "Boston"
+        ]
+      },
+      {
+        "name": "Accommodation",
+        "values": [
+          "Hotel",
+          "Caravan",
+          "House",
+          "Boat"
+        ]
+      },
+      {
+        "name": "Events",
+        "values": [
+          "Shopping",
+          "Museum",
+          "Sports",
+          "Show"
+        ]
+      },
+      {
+        "name": "Season",
+        "values": [
+          "Summer",
+          "Winter",
+          "Spring",
+          "Fall"
+        ]
+      }
+    ]
+  },
   "preference_mode": "elicited",
   "cohort": "nao-pepper",
   "first_actor": "human",
   "output": "text",
   "seed": 42,
   "synthetic": false,
-  "instructions": "Study the displayed preferences and negotiate a complete offer before the deadline. Allocation quantities are what you keep.",
+  "instructions": "Rank the issues and options, then negotiate one complete holiday plan before the deadline. Both parties evaluate the same plan using their own preferences.",
   "surveys": [],
   "conditions": [
     {
       "label": "NAO",
       "strategy": "solver-2021",
       "duration_seconds": 900,
-      "domain": "holiday",
+      "domain": {
+        "schema_version": 1,
+        "name": "appearance-holiday-1",
+        "issues": [
+          {
+            "name": "Destination",
+            "values": [
+              "Barcelona",
+              "Rome",
+              "London",
+              "Boston"
+            ]
+          },
+          {
+            "name": "Accommodation",
+            "values": [
+              "Hotel",
+              "Caravan",
+              "House",
+              "Boat"
+            ]
+          },
+          {
+            "name": "Events",
+            "values": [
+              "Shopping",
+              "Museum",
+              "Sports",
+              "Show"
+            ]
+          },
+          {
+            "name": "Season",
+            "values": [
+              "Summer",
+              "Winter",
+              "Spring",
+              "Fall"
+            ]
+          }
+        ]
+      },
       "output": "nao",
       "output_device": "nao",
       "practice": false
@@ -25,7 +107,48 @@
       "label": "Pepper",
       "strategy": "solver-2021",
       "duration_seconds": 900,
-      "domain": "holiday-b",
+      "domain": {
+        "schema_version": 1,
+        "name": "appearance-holiday-2",
+        "issues": [
+          {
+            "name": "Destination",
+            "values": [
+              "Venice",
+              "Lisbon",
+              "Sydney",
+              "Miami"
+            ]
+          },
+          {
+            "name": "Accommodation",
+            "values": [
+              "Hotel",
+              "Caravan",
+              "House",
+              "Boat"
+            ]
+          },
+          {
+            "name": "Events",
+            "values": [
+              "Shopping",
+              "Museum",
+              "Sports",
+              "Show"
+            ]
+          },
+          {
+            "name": "Season",
+            "values": [
+              "Summer",
+              "Winter",
+              "Spring",
+              "Fall"
+            ]
+          }
+        ]
+      },
       "output": "pepper",
       "output_device": "pepper",
       "practice": false
@@ -38,18 +161,25 @@
   "order": "as_entered",
   "protocol": {
     "id": "robot-appearance-2024",
-    "revision": "2",
+    "revision": "3",
     "paper": "https://doi.org/10.1145/3610978.3640759",
     "requirements": [
       {
         "id": "evidence-1",
-        "description": "Resolve prose versus table differences in Holiday A/B domains and recover exact session mapping"
+        "description": "Historical cohort-specific Holiday domain options: the author confirms destination-only session changes; Events and the first table accommodation set are maintained choices pending original configuration evidence",
+        "required_for": "historical-analysis"
       },
       {
         "id": "evidence-2",
-        "description": "Original pre-study and per-session questionnaires, instructions and timing records"
+        "description": "Pre-study and per-session questionnaires and participant instructions for this protocol",
+        "required_for": "execution"
+      },
+      {
+        "id": "evidence-2-records",
+        "description": "Original experiment timing and questionnaire administration records",
+        "required_for": "historical-analysis"
       }
     ],
-    "configuration_sha256": "2289b08bddc5e01e15a4482e292586765e814559f262c1248efd7bb1b0314d01"
+    "configuration_sha256": "9883bb6dc7ac9315de430e8ec6cbce72600f38e6463bbad597e74362db131439"
   }
 }

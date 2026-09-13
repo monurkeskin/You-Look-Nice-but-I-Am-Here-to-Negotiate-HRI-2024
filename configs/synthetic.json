@@ -2,50 +2,114 @@
   "study_id": "robot-appearance-2024",
   "participant_id": "SYNTHETIC001",
   "title": "You Look Nice, but I Am Here to Negotiate: The Influence of Robot Appearance on Negotiation Dynamics",
-  "domain": "holiday",
+  "domain": {
+    "schema_version": 1,
+    "name": "appearance-holiday-1",
+    "issues": [
+      {
+        "name": "Destination",
+        "values": [
+          "Barcelona",
+          "Rome",
+          "London",
+          "Boston"
+        ]
+      },
+      {
+        "name": "Accommodation",
+        "values": [
+          "Hotel",
+          "Caravan",
+          "House",
+          "Boat"
+        ]
+      },
+      {
+        "name": "Events",
+        "values": [
+          "Shopping",
+          "Museum",
+          "Sports",
+          "Show"
+        ]
+      },
+      {
+        "name": "Season",
+        "values": [
+          "Summer",
+          "Winter",
+          "Spring",
+          "Fall"
+        ]
+      }
+    ]
+  },
   "preference_mode": "assigned",
   "cohort": "default",
   "first_actor": "human",
   "output": "text",
   "seed": 42,
   "synthetic": true,
-  "instructions": "Study the displayed preferences and negotiate a complete offer before the deadline. Allocation quantities are what you keep.",
+  "instructions": "Rank the issues and options, then negotiate one complete holiday plan before the deadline. Both parties evaluate the same plan using their own preferences.",
   "surveys": [],
   "conditions": [
     {
       "label": "NAO",
       "strategy": "solver-2021",
       "duration_seconds": 900,
-      "domain": "holiday",
+      "domain": {
+        "schema_version": 1,
+        "name": "appearance-holiday-1",
+        "issues": [
+          {
+            "name": "Destination",
+            "values": [
+              "Barcelona",
+              "Rome",
+              "London",
+              "Boston"
+            ]
+          },
+          {
+            "name": "Accommodation",
+            "values": [
+              "Hotel",
+              "Caravan",
+              "House",
+              "Boat"
+            ]
+          },
+          {
+            "name": "Events",
+            "values": [
+              "Shopping",
+              "Museum",
+              "Sports",
+              "Show"
+            ]
+          },
+          {
+            "name": "Season",
+            "values": [
+              "Summer",
+              "Winter",
+              "Spring",
+              "Fall"
+            ]
+          }
+        ]
+      },
       "practice": false,
       "output": "text",
       "output_device": null,
       "human_profile": {
         "weights": {
-          "Accommodation": 0.4,
-          "Destination": 0.3,
+          "Destination": 0.4,
+          "Accommodation": 0.3,
           "Events": 0.2,
           "Season": 0.1
         },
         "scores": {
-          "Accommodation": [
-            {
-              "value": "Caravan",
-              "score": 1.0
-            },
-            {
-              "value": "Hotel",
-              "score": 0.75
-            },
-            {
-              "value": "House",
-              "score": 0.5
-            },
-            {
-              "value": "Boat",
-              "score": 0.25
-            }
-          ],
           "Destination": [
             {
               "value": "Barcelona",
@@ -64,31 +128,49 @@
               "score": 0.25
             }
           ],
-          "Events": [
+          "Accommodation": [
             {
-              "value": "Show",
+              "value": "Hotel",
               "score": 1.0
             },
             {
-              "value": "Shopping",
+              "value": "Caravan",
               "score": 0.75
             },
             {
-              "value": "Museum",
+              "value": "House",
               "score": 0.5
             },
             {
+              "value": "Boat",
+              "score": 0.25
+            }
+          ],
+          "Events": [
+            {
+              "value": "Shopping",
+              "score": 1.0
+            },
+            {
+              "value": "Museum",
+              "score": 0.75
+            },
+            {
               "value": "Sports",
+              "score": 0.5
+            },
+            {
+              "value": "Show",
               "score": 0.25
             }
           ],
           "Season": [
             {
-              "value": "Winter",
+              "value": "Summer",
               "score": 1.0
             },
             {
-              "value": "Summer",
+              "value": "Winter",
               "score": 0.75
             },
             {
@@ -107,30 +189,12 @@
       },
       "agent_profile": {
         "weights": {
-          "Accommodation": 0.3,
-          "Destination": 0.4,
+          "Destination": 0.3,
+          "Accommodation": 0.4,
           "Events": 0.1,
           "Season": 0.2
         },
         "scores": {
-          "Accommodation": [
-            {
-              "value": "Caravan",
-              "score": 0.5
-            },
-            {
-              "value": "Hotel",
-              "score": 0.25
-            },
-            {
-              "value": "House",
-              "score": 1.0
-            },
-            {
-              "value": "Boat",
-              "score": 0.75
-            }
-          ],
           "Destination": [
             {
               "value": "Barcelona",
@@ -149,31 +213,49 @@
               "score": 0.75
             }
           ],
-          "Events": [
+          "Accommodation": [
             {
-              "value": "Show",
+              "value": "Hotel",
               "score": 0.5
             },
             {
-              "value": "Shopping",
+              "value": "Caravan",
               "score": 0.25
             },
             {
-              "value": "Museum",
+              "value": "House",
               "score": 1.0
             },
             {
+              "value": "Boat",
+              "score": 0.75
+            }
+          ],
+          "Events": [
+            {
+              "value": "Shopping",
+              "score": 0.5
+            },
+            {
+              "value": "Museum",
+              "score": 0.25
+            },
+            {
               "value": "Sports",
+              "score": 1.0
+            },
+            {
+              "value": "Show",
               "score": 0.75
             }
           ],
           "Season": [
             {
-              "value": "Winter",
+              "value": "Summer",
               "score": 0.5
             },
             {
-              "value": "Summer",
+              "value": "Winter",
               "score": 0.25
             },
             {
@@ -188,43 +270,66 @@
         },
         "provenance": "assigned",
         "reservation": 0.0,
-        "conversion": "rank-linear-paired-v1"
+        "conversion": "synthetic-rank-linear-paired-v1"
       }
     },
     {
       "label": "Pepper",
       "strategy": "solver-2021",
       "duration_seconds": 900,
-      "domain": "holiday-b",
+      "domain": {
+        "schema_version": 1,
+        "name": "appearance-holiday-2",
+        "issues": [
+          {
+            "name": "Destination",
+            "values": [
+              "Venice",
+              "Lisbon",
+              "Sydney",
+              "Miami"
+            ]
+          },
+          {
+            "name": "Accommodation",
+            "values": [
+              "Hotel",
+              "Caravan",
+              "House",
+              "Boat"
+            ]
+          },
+          {
+            "name": "Events",
+            "values": [
+              "Shopping",
+              "Museum",
+              "Sports",
+              "Show"
+            ]
+          },
+          {
+            "name": "Season",
+            "values": [
+              "Summer",
+              "Winter",
+              "Spring",
+              "Fall"
+            ]
+          }
+        ]
+      },
       "practice": false,
       "output": "text",
       "output_device": null,
       "human_profile": {
         "weights": {
-          "Accommodation": 0.4,
-          "Destination": 0.3,
-          "Duration": 0.2,
+          "Destination": 0.4,
+          "Accommodation": 0.3,
+          "Events": 0.2,
           "Season": 0.1
         },
         "scores": {
-          "Accommodation": [
-            {
-              "value": "Hotel",
-              "score": 1.0
-            },
-            {
-              "value": "House",
-              "score": 0.75
-            },
-            {
-              "value": "Boat",
-              "score": 0.5
-            },
-            {
-              "value": "Tent",
-              "score": 0.25
-            }
-          ],
           "Destination": [
             {
               "value": "Venice",
@@ -243,31 +348,49 @@
               "score": 0.25
             }
           ],
-          "Duration": [
+          "Accommodation": [
             {
-              "value": "3 Days",
+              "value": "Hotel",
               "score": 1.0
             },
             {
-              "value": "1 Week",
+              "value": "Caravan",
               "score": 0.75
             },
             {
-              "value": "2 Weeks",
+              "value": "House",
               "score": 0.5
             },
             {
-              "value": "3 Weeks",
+              "value": "Boat",
+              "score": 0.25
+            }
+          ],
+          "Events": [
+            {
+              "value": "Shopping",
+              "score": 1.0
+            },
+            {
+              "value": "Museum",
+              "score": 0.75
+            },
+            {
+              "value": "Sports",
+              "score": 0.5
+            },
+            {
+              "value": "Show",
               "score": 0.25
             }
           ],
           "Season": [
             {
-              "value": "Winter",
+              "value": "Summer",
               "score": 1.0
             },
             {
-              "value": "Summer",
+              "value": "Winter",
               "score": 0.75
             },
             {
@@ -286,30 +409,12 @@
       },
       "agent_profile": {
         "weights": {
-          "Accommodation": 0.3,
-          "Destination": 0.4,
-          "Duration": 0.1,
+          "Destination": 0.3,
+          "Accommodation": 0.4,
+          "Events": 0.1,
           "Season": 0.2
         },
         "scores": {
-          "Accommodation": [
-            {
-              "value": "Hotel",
-              "score": 0.5
-            },
-            {
-              "value": "House",
-              "score": 0.25
-            },
-            {
-              "value": "Boat",
-              "score": 1.0
-            },
-            {
-              "value": "Tent",
-              "score": 0.75
-            }
-          ],
           "Destination": [
             {
               "value": "Venice",
@@ -328,31 +433,49 @@
               "score": 0.75
             }
           ],
-          "Duration": [
+          "Accommodation": [
             {
-              "value": "3 Days",
+              "value": "Hotel",
               "score": 0.5
             },
             {
-              "value": "1 Week",
+              "value": "Caravan",
               "score": 0.25
             },
             {
-              "value": "2 Weeks",
+              "value": "House",
               "score": 1.0
             },
             {
-              "value": "3 Weeks",
+              "value": "Boat",
+              "score": 0.75
+            }
+          ],
+          "Events": [
+            {
+              "value": "Shopping",
+              "score": 0.5
+            },
+            {
+              "value": "Museum",
+              "score": 0.25
+            },
+            {
+              "value": "Sports",
+              "score": 1.0
+            },
+            {
+              "value": "Show",
               "score": 0.75
             }
           ],
           "Season": [
             {
-              "value": "Winter",
+              "value": "Summer",
               "score": 0.5
             },
             {
-              "value": "Summer",
+              "value": "Winter",
               "score": 0.25
             },
             {
@@ -367,7 +490,7 @@
         },
         "provenance": "assigned",
         "reservation": 0.0,
-        "conversion": "rank-linear-paired-v1"
+        "conversion": "synthetic-rank-linear-paired-v1"
       }
     }
   ],

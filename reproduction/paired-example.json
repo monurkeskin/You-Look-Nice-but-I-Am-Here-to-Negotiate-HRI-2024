@@ -5,14 +5,14 @@
   "claim_scope": "synthetic-validation",
   "analysis": "paired-summary",
   "environment": {
-    "framework": "2.0.0"
+    "framework": "2.1.0"
   },
   "parameters": {
     "conditions": [
       "NAO",
       "Partner"
     ],
-    "minimum_rounds": 0,
+    "minimum_rounds": 2,
     "seed": 42,
     "bootstrap_samples": 2000
   },
@@ -30,5 +30,5 @@
       "source": "Three explicitly constructed paired fixture participants"
     }
   ],
-  "description": "Analysis-contract demonstration. Percentile participant bootstrap is a maintained analysis example, not a claim to recover the paper significance test."
+  "description": "Synthetic example of the author-confirmed utility inclusion rule in both cohorts: at least two individual offers in each session, otherwise exclude the participant pair. The legacy rounds column counts individual offers. The percentile participant bootstrap is a maintained example, not the original significance test. Cohorts remain separate."
 }

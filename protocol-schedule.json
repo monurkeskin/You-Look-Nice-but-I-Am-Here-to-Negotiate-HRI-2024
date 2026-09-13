@@ -4,14 +4,43 @@
   "protocol_summary": "Two fifteen-minute sessions with preference elicitation before each. Prior attitude is measured before the experiment; Godspeed and thermometer responses follow the specified interactions.",
   "historical_instruments_included": false,
   "unknowns": [
-    "Resolve prose versus table differences in Holiday A/B domains and recover exact session mapping",
+    "Exact historical fixed issue/value selection by cohort; destination-only changes confirmed by the author",
     "Original pre-study and per-session questionnaires, instructions and timing records",
     "Permitted records with cohort, condition order, utility-scale comparability and inclusion rules"
   ],
   "required_before_human_use": "Resolve each missing evidence item and validate the local study protocol before starting.",
   "analysis_unit": "participant",
-  "minimum_rounds_in_either_session": 0,
-  "round_definition": "Must be supplied from the historical record; do not equate rounds with individual offers.",
   "questionnaires": "pre_study and post_session",
-  "empirical_reproduction": "unavailable: original permitted inputs and analysis provenance are not included"
+  "empirical_reproduction": "unavailable: original permitted inputs and analysis provenance are not included",
+  "elicitation": {
+    "timing": "before-each-session",
+    "input": "descending-issue-and-value-ranks",
+    "conversion": "rank-linear-paired-v1",
+    "evidence": "maintainer-clarification-and-historical-source"
+  },
+  "utility_inclusion": {
+    "nao-pepper": {
+      "minimum_in_each_session": 2,
+      "count_unit": "individual-offers",
+      "exclusion_unit": "participant-pair",
+      "evidence": "HRI 2024 Study I and author clarification on 13 September 2026"
+    },
+    "nao-qt": {
+      "minimum_in_each_session": 2,
+      "count_unit": "individual-offers",
+      "exclusion_unit": "participant-pair",
+      "evidence": "author confirmation on 13 September 2026: both cohorts use the same rule"
+    }
+  },
+  "domain_schedule": {
+    "revision": "destination-only-1",
+    "changed_issue": "Destination",
+    "fixed_issues": [
+      "Accommodation",
+      "Events",
+      "Season"
+    ],
+    "options_source": "HRI 2024 tab:holiday_values, first alternatives for fixed issues",
+    "status": "author-confirmed change rule; maintained fixed-option selection, not verified cohort assignment"
+  }
 }

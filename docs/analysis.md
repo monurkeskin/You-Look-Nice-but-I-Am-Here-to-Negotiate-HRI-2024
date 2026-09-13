@@ -20,7 +20,7 @@ Rounding is applied only when formatting the table. Full precision remains in JS
 | --- | --- |
 | `study_id`, `participant_id`, `session_id` | Stable identities; participants are paired within one study |
 | `condition`, `cohort`, `domain` | Experimental condition and distinct design groups |
-| `rounds` | Nonnegative integer using a documented original-protocol definition |
+| `rounds` | In this example: individual committed offers from both actors, not human–agent cycles |
 | `utility` | Selected normalized outcome measure in [0,1], or null when missing |
 | `practice` | Excluded from main-condition inference |
 
@@ -35,3 +35,9 @@ mapping. Inspect counts and exclusion reasons before any inference. Do not selec
 significance test by searching for a favorable result. The paper's original decisions
 and records are required to claim exact recomputation of its tables or figures.
 The modern percentile bootstrap in the example is a separate declared analysis.
+
+For utility analysis in both cohorts, exclude the entire participant pair if either
+session has fewer than **two individual offers**. Two offers meet the threshold.
+The author confirmed the same pair-level rule for NAO/Pepper and NAO/QT. This
+filter does not automatically apply to questionnaire outcomes. The synthetic
+recipe checks the rule; it does not establish the original exclusion counts.

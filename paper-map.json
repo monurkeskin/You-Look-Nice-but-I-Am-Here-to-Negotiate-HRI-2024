@@ -171,10 +171,22 @@
         {
           "repository": "framework",
           "path": "tests/test_study_protocols.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_ranked_profiles.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_author_clarifications.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_requirement_scope.py"
         }
       ],
       "result_target": "configs/synthetic.json",
-      "explanation": "Two fifteen-minute sessions with preference elicitation before each. Prior attitude is measured before the experiment; Godspeed and thermometer responses follow the specified interactions. Missing original assets and instrument wording remain explicit preflight requirements.",
+      "explanation": "Two fifteen-minute sessions with preference elicitation before each. Prior attitude is measured before the experiment; Godspeed and thermometer responses follow the specified interactions. Missing original assets and instrument wording remain explicit preflight requirements. Fresh participant ranks before each session are author-confirmed; the four-rank pair-swap and value-rotation transformation is supported by historical elicitation source. Independent utility and two-session lifecycle tests are included. Exact historical domain assignment remains separate. The author confirms destination-only session changes. Revision 3 embeds a fixed Events/accommodation set selected from the first paper-table alternatives; exact cohort stimuli remain unrecovered. Destination-only tests cover both robot orders and cohorts.",
       "documentation": "METHOD.md"
     },
     {
@@ -228,10 +240,14 @@
         {
           "repository": "companion",
           "path": "tests/test_reproduction_targets.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_author_clarifications.py"
         }
       ],
       "result_target": "reproduction/published-results.json",
-      "explanation": "Original permitted inputs and historical analysis decisions are unavailable. The recipe returns an unavailable receipt and no numerical result.",
+      "explanation": "Original permitted inputs and historical analysis decisions are unavailable. The recipe returns an unavailable receipt and no numerical result. The author confirms the same utility inclusion rule for both cohorts: exclude the participant pair when either session has fewer than two individual offers. Boundary tests use one, two and three offers in either condition; questionnaire samples are outside this filter.",
       "documentation": "METHOD.md"
     },
     {
@@ -290,10 +306,14 @@
         {
           "repository": "companion",
           "path": "tests/test_reproduction_targets.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_author_clarifications.py"
         }
       ],
       "result_target": "reproduction/paired-example.json",
-      "explanation": "Tested generic paired analysis with explicit cohort/domain grouping and exclusions; synthetic input and modern percentile intervals do not reproduce the paper significance tests.",
+      "explanation": "Tested generic paired analysis with explicit cohort/domain grouping and exclusions; synthetic input and modern percentile intervals do not reproduce the paper significance tests. The author confirms the same utility inclusion rule for both cohorts: exclude the participant pair when either session has fewer than two individual offers. Boundary tests use one, two and three offers in either condition; questionnaire samples are outside this filter.",
       "documentation": "METHOD.md"
     },
     {

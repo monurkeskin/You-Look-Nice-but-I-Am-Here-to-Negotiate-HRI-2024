@@ -70,7 +70,7 @@ Compare the two cohort configurations, inspect preference elicitation and review
 | Interpretation | [docs/analysis.md](docs/analysis.md) | Keep domain, cohort and paired-session identity in the analysis. |
 
 The configurations, method checks and study guides are specific to this paper. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
-participant/conductor views and session analysis. Its exact **2.0.0** revision is
+participant/conductor views and session analysis. Its exact **2.1.0** revision is
 pinned in [framework.json](framework.json); installation brings it in automatically.
 
 The paper's holiday table and prose differ, and its illustrated weights differ from the legacy rank-to-weight conversion. The maintained configurations expose their choices in [METHOD.md](METHOD.md); they do not settle which files were used in each original cohort. Robot gestures and affect inputs also require the relevant lab setup.
@@ -142,7 +142,7 @@ If you use this method or study design, please cite the associated paper:
 ```
 
 The [citation file](CITATION.cff) provides the paper as the preferred citation.
-For software provenance, also record the version and [archived 2.0.0 artifact](https://doi.org/10.5281/zenodo.22729006).
+For software provenance, record the [2.1.0 release](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/releases/tag/v2.1.0) and commit used. The earlier [archived 2.0.0 artifact](https://doi.org/10.5281/zenodo.22729006) remains available.
 When using the shared engine in new research, cite the
 [NEGOTIATOR framework paper](https://doi.org/10.24963/ijcai.2024/1012).
 GPL-3.0-only; original contributors and sources are credited in [NOTICE](NOTICE).
