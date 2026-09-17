@@ -5,6 +5,7 @@ Mehmet Onur Keskin · Selen Akay · Ayşe Doğan · Berkecan Koçyiğit · Junko
 [Paper](https://doi.org/10.1145/3610978.3640759) · [Explore the method](METHOD.md) · [Try the code](#try-it-yourself) · [Study guide](docs/protocol.md) · [Citation](#cite-the-paper)
 
 [![Tests](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024/branch/main/graph/badge.svg)](https://codecov.io/gh/monurkeskin/You-Look-Nice-but-I-Am-Here-to-Negotiate-HRI-2024)
 
 People form impressions of a robot before it makes its first offer. **Do those
 impressions carry into bargaining outcomes?** This paper studies holiday planning
